@@ -4,7 +4,13 @@ import { arrToStr } from "../utils/arrToStr";
 import { themeSelector } from "../utils/ThemeSelector";
 import "./calendar.css";
 
-export const Calendar = ({ backgroundColor, theme, primaryFont, rotation }) => {
+export const Calendar = ({
+  backgroundColor,
+  theme,
+  primaryFont,
+  rotation,
+  primaryColor,
+}) => {
   const [colorString, setColorString] = useState("");
 
   const [currentMonth, setCurrentMonth] = useState(new Date());
@@ -42,7 +48,11 @@ export const Calendar = ({ backgroundColor, theme, primaryFont, rotation }) => {
     let dayCells = [];
     for (let i = 1; i <= daysInMonth; i++) {
       dayCells.push(
-        <div key={i} className="calendar-day">
+        <div
+          key={i}
+          style={{ backgroundColor: primaryColor }}
+          className="calendar-day"
+        >
           {i}
         </div>
       );
@@ -83,17 +93,27 @@ export const Calendar = ({ backgroundColor, theme, primaryFont, rotation }) => {
       style={{ backgroundImage: colorString, color: primaryFont }}
     >
       <div className="calendar-header">
-        <button style={{ color: primaryFont }} onClick={handlePrevMonth}>
+        <button
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
+          onClick={handlePrevMonth}
+        >
           &lt;
         </button>
         <h2>{months[currentMonth.getMonth()]}</h2>
-        <button style={{ color: primaryFont }} onClick={handleNextMonth}>
+        <button
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
+          onClick={handleNextMonth}
+        >
           &gt;
         </button>
       </div>
       <div className="calendar-body">
         {days.map((day) => (
-          <div key={day} className="calendar-day-header">
+          <div
+            key={day}
+            style={{ backgroundColor: primaryColor }}
+            className="calendar-day-header"
+          >
             {day}
           </div>
         ))}
@@ -107,6 +127,7 @@ Calendar.prototype = {
   backgroundColor: PropTypes.array,
   theme: PropTypes.oneOf([0, 1, 2, 3, 4]),
   primaryFont: PropTypes.string,
+  primaryColor: PropTypes.string,
   rotation: PropTypes.number,
 };
 
@@ -115,4 +136,5 @@ Calendar.defaultProps = {
   primaryFont: "#333",
   theme: 0,
   rotation: 90,
+  primaryColor: "transparent",
 };

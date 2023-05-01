@@ -1,5 +1,4 @@
 .calculator-container {
-  width: 300px;
   margin: auto;
   background-color: transparent;
   padding: 20px;
@@ -29,8 +28,8 @@
 }
 
 .calculator-button {
-  width: 70px;
-  height: 70px;
+  width: 20%;
+  height: 50%;
   border: none;
   border-radius: 20px;
   margin-bottom: 10px;
@@ -55,7 +54,6 @@
   box-shadow: 0 0 3px #1e88e5;
 }
 
-.clear{
+.clear {
   width: 145px;
-
 }

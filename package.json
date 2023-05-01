@@ -1,9 +1,9 @@
 {
   "name": "widgetsy",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
   "type": "module",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "scripts": {
     "start": "storybook dev -p 6006",
     "build": "storybook build",
@@ -38,9 +38,5 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^7.0.6"
-  },
-  "peerDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
   }
 }

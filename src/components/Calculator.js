@@ -4,12 +4,12 @@ import { arrToStr } from "../utils/arrToStr";
 import { themeSelector } from "../utils/ThemeSelector";
 import "./calculator.css";
 
-
 export const Calculator = ({
   backgroundColor,
   theme,
   primaryFont,
   rotation,
+  primaryColor,
 }) => {
   const [input, setInput] = useState("");
   const [colorString, setColorString] = useState("");
@@ -44,30 +44,37 @@ export const Calculator = ({
     } else {
       setColorString("linear-gradient(transparent)");
     }
-  }, []);
+  }, [backgroundColor, theme, primaryFont, rotation]);
 
   return (
-    <div className="calculator-container"style={{ backgroundImage: colorString}}>
-      <div className="calculator-display">
+    <div
+      className="calculator-container"
+      style={{ backgroundImage: colorString }}
+    >
+      <div
+        className="calculator-display"
+        style={{ backgroundColor: primaryColor }}
+      >
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          style={{ backgroundColor: primaryColor }}
         />
       </div>
-      <div className="calculator-row" style={{color: "#fff" }}>
+      <div className="calculator-row" style={{ color: "#fff" }}>
         <button
           className="calculator-button"
           value="7"
           onClick={handleButtonClick}
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
         >
           7
         </button>
         <button
           className="calculator-button"
           value="8"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           onClick={handleButtonClick}
         >
           8
@@ -75,14 +82,14 @@ export const Calculator = ({
         <button
           className="calculator-button"
           value="9"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           onClick={handleButtonClick}
         >
           9
         </button>
         <button
           className="calculator-button"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           value="+"
           onClick={handleButtonClick}
         >
@@ -93,7 +100,7 @@ export const Calculator = ({
         <button
           className="calculator-button"
           value="4"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           onClick={handleButtonClick}
         >
           4
@@ -101,7 +108,7 @@ export const Calculator = ({
         <button
           className="calculator-button"
           value="5"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           onClick={handleButtonClick}
         >
           5
@@ -109,14 +116,14 @@ export const Calculator = ({
         <button
           className="calculator-button"
           value="6"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           onClick={handleButtonClick}
         >
           6
         </button>
         <button
           className="calculator-button"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           value="-"
           onClick={handleButtonClick}
         >
@@ -127,7 +134,7 @@ export const Calculator = ({
         <button
           className="calculator-button"
           value="1"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           onClick={handleButtonClick}
         >
           1
@@ -135,13 +142,13 @@ export const Calculator = ({
         <button
           className="calculator-button"
           value="2"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           onClick={handleButtonClick}
         >
           2
         </button>
         <button
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           className="calculator-button"
           value="3"
           onClick={handleButtonClick}
@@ -150,7 +157,7 @@ export const Calculator = ({
         </button>
         <button
           className="calculator-button"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           value="*"
           onClick={handleButtonClick}
         >
@@ -161,7 +168,7 @@ export const Calculator = ({
         <button
           className="calculator-button"
           value="0"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           onClick={handleButtonClick}
         >
           0
@@ -169,14 +176,14 @@ export const Calculator = ({
         <button
           className="calculator-button"
           value="."
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           onClick={handleButtonClick}
         >
           .
         </button>
         <button
           className="calculator-button"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           value="="
           onClick={handleButtonClick}
         >
@@ -184,7 +191,7 @@ export const Calculator = ({
         </button>
         <button
           className="calculator-button"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           value="/"
           onClick={handleButtonClick}
         >
@@ -195,7 +202,7 @@ export const Calculator = ({
         <button
           className="calculator-button clear"
           value="CE"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           onClick={handleButtonClick}
         >
           Clear Last
@@ -203,7 +210,7 @@ export const Calculator = ({
         <button
           className="calculator-button clear"
           value="C"
-          style={{color: primaryFont }}
+          style={{ color: primaryFont, backgroundColor: primaryColor }}
           onClick={handleButtonClick}
         >
           Clear All

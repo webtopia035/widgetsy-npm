@@ -14,13 +14,14 @@ export const Clock = ({ backgroundColor, theme, primaryFont, rotation }) => {
   }, []);
   useEffect(() => {
     if (theme !== 0) {
-      themeSelector(theme,rotation,setColorString)
+      themeSelector(theme, rotation, setColorString);
     } else if (backgroundColor) {
       arrToStr(backgroundColor, rotation, setColorString);
     } else {
       setColorString("linear-gradient(transparent)");
     }
   }, []);
+  console.log(colorString);
 
   return (
     <div
