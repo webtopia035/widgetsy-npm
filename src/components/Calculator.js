@@ -44,7 +44,7 @@ export const Calculator = ({
     } else {
       setColorString("linear-gradient(transparent)");
     }
-  }, [backgroundColor, theme, primaryFont, rotation]);
+  }, [backgroundColor, theme, primaryFont, rotation, primaryColor]);
 
   return (
     <div
@@ -225,11 +225,13 @@ Calculator.prototype = {
   theme: PropTypes.oneOf([0, 1, 2, 3, 4]),
   primaryFont: PropTypes.string,
   rotation: PropTypes.number,
+  primaryColor: PropTypes.string,
 };
 
 Calculator.defaultProps = {
   backgroundColor: undefined,
   primaryFont: "#333",
   theme: 0,
+  primaryColor: "#000",
   rotation: 90,
 };

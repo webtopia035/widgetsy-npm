@@ -4,7 +4,13 @@ import { arrToStr } from "../utils/arrToStr";
 import { themeSelector } from "../utils/ThemeSelector";
 import "./clock.css";
 
-export const Clock = ({ backgroundColor, theme, primaryFont, rotation }) => {
+export const Clock = ({
+  backgroundColor,
+  theme,
+  primaryFont,
+  primaryColor,
+  rotation,
+}) => {
   const [time, setTime] = useState(new Date());
   const [colorString, setColorString] = useState("");
 
@@ -20,13 +26,16 @@ export const Clock = ({ backgroundColor, theme, primaryFont, rotation }) => {
     } else {
       setColorString("linear-gradient(transparent)");
     }
-  }, []);
-  console.log(colorString);
+  }, [backgroundColor, theme, primaryFont, rotation, primaryColor]);
 
   return (
     <div
       className="clock-container"
-      style={{ backgroundImage: colorString, color: primaryFont }}
+      style={{
+        backgroundImage: colorString,
+        color: primaryFont,
+        color: primaryColor,
+      }}
     >
       <div className="clock-time">{time.toLocaleTimeString()}</div>
     </div>
@@ -36,12 +45,14 @@ export const Clock = ({ backgroundColor, theme, primaryFont, rotation }) => {
 Clock.prototype = {
   backgroundColor: PropTypes.array,
   theme: PropTypes.oneOf([0, 1, 2, 3, 4]),
+  primaryColor: PropTypes.string,
   primaryFont: PropTypes.string,
   rotation: PropTypes.number,
 };
 
 Clock.defaultProps = {
   backgroundColor: undefined,
+  primaryColor: "#000",
   primaryFont: "#333",
   theme: 0,
   rotation: 90,

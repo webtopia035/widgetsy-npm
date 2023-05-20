@@ -85,7 +85,7 @@ export const Calendar = ({
     } else {
       setColorString("linear-gradient(transparent)");
     }
-  }, []);
+  }, [backgroundColor, theme, primaryFont, rotation, primaryColor]);
 
   return (
     <div
@@ -136,5 +136,5 @@ Calendar.defaultProps = {
   primaryFont: "#333",
   theme: 0,
   rotation: 90,
-  primaryColor: "transparent",
+  primaryColor: "#fff",
 };
