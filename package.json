@@ -1,9 +1,10 @@
 {
   "name": "widgetsy",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.6",
   "type": "module",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "typings": "dist/index",
   "scripts": {
     "start": "storybook dev -p 6006",
     "build": "storybook build",

@@ -29,6 +29,7 @@ export const Primary = {
     ],
     primaryFont: "#ccc",
     theme: 0,
+    primaryColor: "#757ff3",
     rotation: 90,
   },
 };
