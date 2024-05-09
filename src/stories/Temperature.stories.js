@@ -1,11 +1,11 @@
-import { Whiteboard } from "../components/Whiteboard";
+import { TemperatureUnitConverter } from "../components/Temperature";
 
 export default {
-  title: "Example/Whiteboard",
-  component: Whiteboard,
+  title: "Example/TemperatureConverter",
+  component: TemperatureUnitConverter,
 };
 
-const Template = (args) => <Whiteboard {...args} />;
+const Template = (args) => <TemperatureUnitConverter {...args} />;
 
 export const Default = Template.bind({});
 

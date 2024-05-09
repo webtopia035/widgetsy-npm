@@ -1,11 +1,11 @@
-import { Whiteboard } from "../components/Whiteboard";
+import { LengthUnitConverter } from "../components/Length";
 
 export default {
-  title: "Example/Whiteboard",
-  component: Whiteboard,
+  title: "Example/LengthConverter",
+  component: LengthUnitConverter,
 };
 
-const Template = (args) => <Whiteboard {...args} />;
+const Template = (args) => <LengthUnitConverter {...args} />;
 
 export const Default = Template.bind({});
 

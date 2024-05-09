@@ -1,12 +1,10 @@
 .whiteboard-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  min-height: 100vh;
+  
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .whiteboard-toolbar {
@@ -21,6 +19,7 @@
   padding: 0px;
   border: none;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 .whiteboard-toolbar button {
@@ -37,4 +36,5 @@
   cursor: crosshair;
   width: 90%;
   height: 80%;
+  margin-left: 5%;
 }

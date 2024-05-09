@@ -1,11 +1,11 @@
-import { Whiteboard } from "../components/Whiteboard";
+import { AreaUnitConverter } from "../components/Area";
 
 export default {
-  title: "Example/Whiteboard",
-  component: Whiteboard,
+  title: "Example/AreaConverter",
+  component: AreaUnitConverter,
 };
 
-const Template = (args) => <Whiteboard {...args} />;
+const Template = (args) => <AreaUnitConverter {...args} />;
 
 export const Default = Template.bind({});
 

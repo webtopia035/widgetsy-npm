@@ -1,11 +1,11 @@
-import { Whiteboard } from "../components/Whiteboard";
+import { Timer } from "../components/Timer";
 
 export default {
-  title: "Example/Whiteboard",
-  component: Whiteboard,
+  title: "Example/Timer",
+  component: Timer,
 };
 
-const Template = (args) => <Whiteboard {...args} />;
+const Template = (args) => <Timer {...args} />;
 
 export const Default = Template.bind({});
 

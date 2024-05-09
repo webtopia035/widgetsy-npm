@@ -1,3 +1,10 @@
 export { Calculator } from "./components/Calculator";
 export { Clock } from "./components/Clock";
 export { Calendar } from "./components/Calendar";
+export { Timer } from "./components/Timer";
+export { Whiteboard } from "./components/Whiteboard";
+export { TemperatureUnitConverter as TemperatureConverter } from "./components/Temperature";
+export { MassUnitConverter as MassConverter } from "./components/Mass";
+export { LengthUnitConverter as LengthConverter } from "./components/Length";
+export { AreaUnitConverter as AreaConverter } from "./components/Area";
+export { SpeedUnitConverter as SpeedConverter } from "./components/Speed";

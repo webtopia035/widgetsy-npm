@@ -1,11 +1,11 @@
-import { Whiteboard } from "../components/Whiteboard";
+import { MassUnitConverter } from "../components/Mass";
 
 export default {
-  title: "Example/Whiteboard",
-  component: Whiteboard,
+  title: "Example/MassConverter",
+  component: MassUnitConverter,
 };
 
-const Template = (args) => <Whiteboard {...args} />;
+const Template = (args) => <MassUnitConverter {...args} />;
 
 export const Default = Template.bind({});
 

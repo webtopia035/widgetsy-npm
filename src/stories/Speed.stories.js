@@ -1,11 +1,11 @@
-import { Whiteboard } from "../components/Whiteboard";
+import { SpeedUnitConverter } from "../components/Speed";
 
 export default {
-  title: "Example/Whiteboard",
-  component: Whiteboard,
+  title: "Example/SpeedConverter",
+  component: SpeedUnitConverter,
 };
 
-const Template = (args) => <Whiteboard {...args} />;
+const Template = (args) => <SpeedUnitConverter {...args} />;
 
 export const Default = Template.bind({});
 
